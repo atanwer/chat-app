@@ -12,8 +12,8 @@ This is a simple application which provides web services to facilitate group cha
 1. Clone the repository:
 
    ```
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/atanwer/chat-app.git
+   cd chat-app
    ```
 
 2. Install dependencies:
@@ -37,16 +37,13 @@ This is a simple application which provides web services to facilitate group cha
    }
    ```
 
-   Note: The password in this example is hashed. In a real-world scenario, you would typically create users through the application's user management interface, which would handle password hashing securely.
-
 4. Create a `.env` file in the root directory with the following content:
    ```
-   MONGODB_URI=mongodb://localhost:27017/your_database_name
+   MONGODB_URI=mongodb://localhost:27017/chat-app
    JWT_SECRET=your_secret_key
    JWT_EXPIRES_IN=1d
    PORT=3000
    ```
-   Replace `your_database_name` and `your_secret_key` with appropriate values.
 
 ## Running the Application
 
@@ -56,7 +53,7 @@ This is a simple application which provides web services to facilitate group cha
   npm start
   ```
 
-- For development (with hot reloading):
+- For development:
   ```
   npm run dev
   ```
@@ -81,15 +78,3 @@ To run the e2e tests:
 ```
 npm test
 ```
-
-## API Documentation
-
-[Include API documentation or link to it here]
-
-## Contributing
-
-[Include contribution guidelines here]
-
-## License
-
-[Include license information here]
