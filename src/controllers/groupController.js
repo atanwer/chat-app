@@ -27,6 +27,9 @@ exports.createGroup = catchAsync(async (req, res) => {
         res.status(201).json({
             status: true,
             message: 'Group Created.',
+            data: {
+                group: newGroup
+            }
         });
     }
 });
@@ -76,7 +79,9 @@ exports.searchGroups = catchAsync(async (req, res) => {
     res.status(200).json({
         status: true,
         results: groups.length,
-        groups
+        data: {
+            groups
+        }
     });
 });
 

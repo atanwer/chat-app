@@ -27,7 +27,10 @@ exports.sendMessage = catchAsync(async (req, res) => {
     if (newMessage) {
         res.status(201).json({
             status: true,
-            message: "Message sent."
+            message: "Message sent.",
+            data: {
+                message: newMessage
+            }
         });
     }
 });
